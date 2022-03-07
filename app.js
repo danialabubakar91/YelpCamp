@@ -25,6 +25,7 @@ const MongoDBStore = require('connect-mongo');
 const dbUrl = process.env.DB_URL;
 localDbUrl = 'mongodb://localhost:27017/yelp-camp'
 mongoose.connect(dbUrl || localDbUrl);
+//mongoose.connect(dbUrl);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -85,17 +86,14 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use((req,res,next)=>{
+    console.log(res.locals)
     res.locals.currentUser = req.user;
     res.locals.success = req.flash('success');
     res.locals.error = req.flash('error');
     next();
 });
 
-app.get('/fakeUser', async(req,res)=>{
-    const user = new User({email: 'danial2@gmail.com', username: 'danial2'});
-    const newUser = await User.register(user, 'password');
-    res.send(newUser);
-})
+
 
 app.use('/', userRoutes);
 app.use('/campgrounds', campgroundsRoutes);
