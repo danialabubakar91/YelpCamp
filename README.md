@@ -1,2 +1,5 @@
 # YelpCamp
-YelpCamp, a website that allows users to create, review, update and delete campgrounds. This website is part of Colt Steele's web developer boot camp which i enrolled in at Udemy. Built with Node.js, Express.js, MongoDB and Bootstrap.
+YelpCamp, a website that allows users to create, review, update and delete campgrounds. This website is part of Colt Steele's web developer boot camp.
+
+Stack: Node.js, Express.js, MongoDB, Mongoose, EJS, Bootstrap
+Hosted on https://yelpcamps-app.herokuapp.com/
