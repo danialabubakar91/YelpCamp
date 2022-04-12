@@ -3,4 +3,4 @@ YelpCamp, a website that allows users to create, review, update and delete campg
 
 Stack: Node.js, Express.js, MongoDB, Mongoose, EJS, Bootstrap
 
-Hosted on https://yelpcamps-app.herokuapp.com/
+Hosted on Heroku: https://yelpcamps-app.herokuapp.com/
